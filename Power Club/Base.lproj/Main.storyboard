@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Power_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xtG-c9-q8f">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.34180477050000002" green="0.62469875220000004" blue="0.98119290329999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="oyR-eu-Z74">
+                                <rect key="frame" x="100" y="70" width="175" height="38"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="MoJ-Tq-rjS">
+                                <rect key="frame" x="20" y="148" width="335" height="189"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Registered Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXi-HU-rEH">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-0O-mBu">
+                                        <rect key="frame" x="0.0" y="53" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnn-Y2-R8j">
+                                        <rect key="frame" x="0.0" y="106" width="335" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.40061346476510068" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Generate OTP">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="GenerateOTP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrK-im-Obq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7y-3W-IYo">
+                                        <rect key="frame" x="0.0" y="159" width="335" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.39521287751677853" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pDw-o3-ph8"/>
+                                            <segue destination="y7p-Ww-9qd" kind="show" id="YLo-3j-3sS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xtG-c9-q8f" secondAttribute="bottom" id="11n-WU-KJm"/>
+                            <constraint firstItem="MoJ-Tq-rjS" firstAttribute="top" secondItem="oyR-eu-Z74" secondAttribute="bottom" constant="40" id="72o-pc-AJ4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oyR-eu-Z74" secondAttribute="trailing" constant="100" id="EEy-C5-rGK"/>
+                            <constraint firstItem="xtG-c9-q8f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LTh-df-0AD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MoJ-Tq-rjS" secondAttribute="trailing" constant="20" id="Ns3-tg-d3L"/>
+                            <constraint firstItem="xtG-c9-q8f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qbe-EZ-wcz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xtG-c9-q8f" secondAttribute="trailing" id="ZoE-vs-tIq"/>
+                            <constraint firstItem="MoJ-Tq-rjS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f56-NX-FZn"/>
+                            <constraint firstItem="oyR-eu-Z74" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="nfj-1I-REN"/>
+                            <constraint firstItem="oyR-eu-Z74" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="ttU-yo-sgF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtMobileNo" destination="IXi-HU-rEH" id="Q5P-ZO-pYY"/>
+                        <outlet property="txtOtp" destination="nMZ-0O-mBu" id="DZ7-yQ-Mff"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238" y="111"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5mA-zc-NP2">
+            <objects>
+                <viewController id="y7p-Ww-9qd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S6K-dX-QTV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider1" translatesAutoresizingMaskIntoConstraints="NO" id="M6I-mW-s8B">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Ybw-5l-wNS"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Tf2-GO-bgR">
+                                <rect key="frame" x="0.0" y="220" width="375" height="322"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd6-BA-ZpO">
+                                        <rect key="frame" x="97" y="0.0" width="181" height="50"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <size key="titleShadowOffset" width="100" height="100"/>
+                                        <state key="normal" title="Notification" image="notification">
+                                            <color key="titleColor" red="0.02176910825073719" green="0.0043271998874843121" blue="0.0036150694359093904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.93078362941741943" green="0.70707899332046509" blue="0.66880941390991211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="84c-Fn-w1g" kind="show" identifier="Tonotification" id="mkr-cn-JmR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHw-X1-czh">
+                                        <rect key="frame" x="97" y="68" width="181" height="50"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <size key="titleShadowOffset" width="100" height="100"/>
+                                        <state key="normal" title="Your Profile" image="man">
+                                            <color key="titleColor" red="0.02176910825073719" green="0.0043271998874843121" blue="0.0036150694359093904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.93078362941741943" green="0.70707899332046509" blue="0.66880941390991211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="xMx-PV-Jlr" kind="show" identifier="yourProfile" id="c0A-ey-8c7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyN-ZB-S2p">
+                                        <rect key="frame" x="96.5" y="136" width="182" height="50"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <size key="titleShadowOffset" width="100" height="100"/>
+                                        <state key="normal" title="Gallery        " image="gallery">
+                                            <color key="titleColor" red="0.02176910825073719" green="0.0043271998874843121" blue="0.0036150694359093904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.93078362941741943" green="0.70707899332046509" blue="0.66880941390991211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="EnW-kd-O7t" kind="show" identifier="TOGallery" id="SMc-CB-1LV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiv-kR-68c">
+                                        <rect key="frame" x="99" y="204" width="177" height="50"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <size key="titleShadowOffset" width="100" height="100"/>
+                                        <state key="normal" title="Feedback  " image="feedback">
+                                            <color key="titleColor" red="0.02176910825073719" green="0.0043271998874843121" blue="0.0036150694359093904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.93078362941741943" green="0.70707899332046509" blue="0.66880941390991211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="Rqn-Ko-oHJ" kind="show" identifier="ToFeedback" id="YIn-4J-Wwb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jq-hj-OJV">
+                                        <rect key="frame" x="95" y="272" width="185" height="50"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <size key="titleShadowOffset" width="100" height="100"/>
+                                        <state key="normal" title="Holidays      " image="calender_icon">
+                                            <color key="titleColor" red="0.02176910825073719" green="0.0043271998874843121" blue="0.0036150694359093904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="0.93078362941741943" green="0.70707899332046509" blue="0.66880941390991211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="743-Az-YJ0" kind="show" identifier="ToHoliday" id="19m-dX-FF3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8iu-DQ-w0u" firstAttribute="trailing" secondItem="Tf2-GO-bgR" secondAttribute="trailing" id="BKG-06-Yoa"/>
+                            <constraint firstItem="Tf2-GO-bgR" firstAttribute="top" secondItem="8iu-DQ-w0u" secondAttribute="top" constant="200" id="YqO-fC-sJK"/>
+                            <constraint firstItem="Tf2-GO-bgR" firstAttribute="leading" secondItem="8iu-DQ-w0u" secondAttribute="leading" id="Yve-GT-Obw"/>
+                            <constraint firstItem="M6I-mW-s8B" firstAttribute="top" secondItem="S6K-dX-QTV" secondAttribute="top" id="bGy-BZ-fK4"/>
+                            <constraint firstItem="M6I-mW-s8B" firstAttribute="leading" secondItem="8iu-DQ-w0u" secondAttribute="leading" id="ttd-rC-hRo"/>
+                            <constraint firstItem="M6I-mW-s8B" firstAttribute="trailing" secondItem="8iu-DQ-w0u" secondAttribute="trailing" id="xQU-QS-K1D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8iu-DQ-w0u"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HE4-iD-8JQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1056.8" y="109.29535232383809"/>
+        </scene>
+        <!--Notification-->
+        <scene sceneID="63J-Nu-3oN">
+            <objects>
+                <viewController storyboardIdentifier="Notification" title="Notification" id="84c-Fn-w1g" customClass="NotificationVC" customModule="Power_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SLo-EA-2SH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXP-CC-vnI">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMm-4x-T3b">
+                                <rect key="frame" x="10" y="30" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Nfq-R6-0nA"/>
+                                    <constraint firstAttribute="height" constant="25" id="VsV-sf-h4M"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backButton:" destination="84c-Fn-w1g" eventType="touchUpInside" id="xgX-Sj-Ans"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZXP-CC-vnI" firstAttribute="top" secondItem="4zu-44-gV7" secondAttribute="top" id="20l-ed-AMD"/>
+                            <constraint firstItem="4zu-44-gV7" firstAttribute="bottom" secondItem="ZXP-CC-vnI" secondAttribute="bottom" id="BBG-Hq-vDa"/>
+                            <constraint firstItem="ZXP-CC-vnI" firstAttribute="leading" secondItem="4zu-44-gV7" secondAttribute="leading" id="FHN-k0-1iw"/>
+                            <constraint firstItem="4zu-44-gV7" firstAttribute="trailing" secondItem="ZXP-CC-vnI" secondAttribute="trailing" id="Gf7-WI-bsT"/>
+                            <constraint firstItem="qMm-4x-T3b" firstAttribute="leading" secondItem="4zu-44-gV7" secondAttribute="leading" constant="10" id="Oa3-bQ-4ay"/>
+                            <constraint firstItem="qMm-4x-T3b" firstAttribute="top" secondItem="4zu-44-gV7" secondAttribute="top" constant="10" id="XYa-sb-6fo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4zu-44-gV7"/>
+                    </view>
+                    <connections>
+                        <outlet property="notificationWebview" destination="ZXP-CC-vnI" id="oUx-TY-it7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y7G-Pc-lqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1681" y="-880"/>
+        </scene>
+        <!--Your Profile-->
+        <scene sceneID="P9R-We-02e">
+            <objects>
+                <viewController title="Your Profile" id="xMx-PV-Jlr" customClass="YourProfileVC" customModule="Power_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YJ6-gr-Gny">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cmk-SW-kqe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igh-hF-iCo">
+                                <rect key="frame" x="10" y="30" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="ZZv-Ea-FUd"/>
+                                    <constraint firstAttribute="height" constant="25" id="ji1-cy-n7m"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backButton:" destination="xMx-PV-Jlr" eventType="touchUpInside" id="39T-Uz-O2u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="igh-hF-iCo" firstAttribute="leading" secondItem="eXx-UM-I6k" secondAttribute="leading" constant="10" id="LKw-v4-KFh"/>
+                            <constraint firstItem="Cmk-SW-kqe" firstAttribute="top" secondItem="YJ6-gr-Gny" secondAttribute="top" id="Q85-ni-QGL"/>
+                            <constraint firstItem="Cmk-SW-kqe" firstAttribute="bottom" secondItem="eXx-UM-I6k" secondAttribute="bottom" id="Tme-60-aL4"/>
+                            <constraint firstItem="Cmk-SW-kqe" firstAttribute="trailing" secondItem="eXx-UM-I6k" secondAttribute="trailing" id="b84-k4-pLA"/>
+                            <constraint firstItem="igh-hF-iCo" firstAttribute="top" secondItem="eXx-UM-I6k" secondAttribute="top" constant="10" id="fqP-54-87W"/>
+                            <constraint firstItem="Cmk-SW-kqe" firstAttribute="leading" secondItem="eXx-UM-I6k" secondAttribute="leading" id="x2t-zg-5YH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eXx-UM-I6k"/>
+                    </view>
+                    <connections>
+                        <outlet property="profileWebview" destination="Cmk-SW-kqe" id="iwN-Va-VN3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZj-DO-YnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2661.5999999999999" y="-752.47376311844084"/>
+        </scene>
+        <!--Gallery-->
+        <scene sceneID="hiB-Dk-Yau">
+            <objects>
+                <viewController title="Gallery" id="EnW-kd-O7t" customClass="GalleryVC" customModule="Power_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jT4-1S-rUj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxr-lK-o1s">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZO-8I-liJ">
+                                <rect key="frame" x="10" y="30" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="393-eU-Jrb"/>
+                                    <constraint firstAttribute="width" constant="30" id="V22-fY-xud"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backButton:" destination="EnW-kd-O7t" eventType="touchUpInside" id="CP9-76-PiW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cxr-lK-o1s" firstAttribute="leading" secondItem="MoG-ht-sHg" secondAttribute="leading" id="0QO-Lf-6cW"/>
+                            <constraint firstItem="cxr-lK-o1s" firstAttribute="trailing" secondItem="MoG-ht-sHg" secondAttribute="trailing" id="6tg-ss-T7R"/>
+                            <constraint firstItem="cxr-lK-o1s" firstAttribute="bottom" secondItem="MoG-ht-sHg" secondAttribute="bottom" id="LTp-ZZ-RON"/>
+                            <constraint firstItem="cZO-8I-liJ" firstAttribute="top" secondItem="MoG-ht-sHg" secondAttribute="top" constant="10" id="Oog-PZ-V5y"/>
+                            <constraint firstItem="cxr-lK-o1s" firstAttribute="top" secondItem="jT4-1S-rUj" secondAttribute="top" id="txf-30-LHD"/>
+                            <constraint firstItem="cZO-8I-liJ" firstAttribute="leading" secondItem="MoG-ht-sHg" secondAttribute="leading" constant="10" id="y8X-Jt-wB9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MoG-ht-sHg"/>
+                    </view>
+                    <connections>
+                        <outlet property="GalleryWebview" destination="cxr-lK-o1s" id="CUb-ec-KL0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Myh-rC-60y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2661.5999999999999" y="-67.016491754122939"/>
+        </scene>
+        <!--Holidays-->
+        <scene sceneID="8oS-iu-g9L">
+            <objects>
+                <viewController title="Holidays" id="743-Az-YJ0" customClass="HolidaysVC" customModule="Power_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aUw-dF-gyN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQd-JS-KSl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wKH-Sy-vdC">
+                                <rect key="frame" x="10" y="30" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="423-Ir-geK"/>
+                                    <constraint firstAttribute="height" constant="25" id="TAR-vI-xcT"/>
+                                </constraints>
+                                <state key="normal" image="backButton">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="743-Az-YJ0" eventType="touchUpInside" id="pDt-oE-Lg5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wKH-Sy-vdC" firstAttribute="top" secondItem="iav-eB-Oug" secondAttribute="top" constant="10" id="KdK-Yz-j4c"/>
+                            <constraint firstItem="iav-eB-Oug" firstAttribute="bottom" secondItem="jQd-JS-KSl" secondAttribute="bottom" id="a1u-jV-Aof"/>
+                            <constraint firstItem="jQd-JS-KSl" firstAttribute="leading" secondItem="iav-eB-Oug" secondAttribute="leading" id="fQQ-QE-Mje"/>
+                            <constraint firstItem="wKH-Sy-vdC" firstAttribute="leading" secondItem="iav-eB-Oug" secondAttribute="leading" constant="10" id="nql-xX-M2R"/>
+                            <constraint firstItem="jQd-JS-KSl" firstAttribute="top" secondItem="aUw-dF-gyN" secondAttribute="top" id="nua-iE-a4Q"/>
+                            <constraint firstItem="iav-eB-Oug" firstAttribute="trailing" secondItem="jQd-JS-KSl" secondAttribute="trailing" id="yzF-7a-tMp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iav-eB-Oug"/>
+                    </view>
+                    <connections>
+                        <outlet property="HolidaysWebview" destination="jQd-JS-KSl" id="fkT-N7-nEq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L40-ny-26O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1681" y="856"/>
+        </scene>
+        <!--Feedback-->
+        <scene sceneID="iJN-di-ZXg">
+            <objects>
+                <viewController title="Feedback" id="Rqn-Ko-oHJ" customClass="FeedbackVC" customModule="Power_Club" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i7K-5o-9VO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewa-81-Oge">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXO-P2-hDK">
+                                <rect key="frame" x="10" y="30" width="30" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="8mU-M4-Bzx"/>
+                                    <constraint firstAttribute="width" constant="30" id="CB0-Mh-N2c"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="backButton:" destination="Rqn-Ko-oHJ" eventType="touchUpInside" id="Pkt-7U-uLp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ewa-81-Oge" firstAttribute="trailing" secondItem="5C2-rc-Dfo" secondAttribute="trailing" id="45H-M6-PSM"/>
+                            <constraint firstItem="ewa-81-Oge" firstAttribute="bottom" secondItem="5C2-rc-Dfo" secondAttribute="bottom" id="84d-jM-teH"/>
+                            <constraint firstItem="ewa-81-Oge" firstAttribute="leading" secondItem="5C2-rc-Dfo" secondAttribute="leading" id="SwL-XG-Eze"/>
+                            <constraint firstItem="ewa-81-Oge" firstAttribute="top" secondItem="i7K-5o-9VO" secondAttribute="top" id="U94-X6-6YC"/>
+                            <constraint firstItem="nXO-P2-hDK" firstAttribute="leading" secondItem="5C2-rc-Dfo" secondAttribute="leading" constant="10" id="cFK-Sg-U0J"/>
+                            <constraint firstItem="nXO-P2-hDK" firstAttribute="top" secondItem="5C2-rc-Dfo" secondAttribute="top" constant="10" id="eGK-nD-XPB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5C2-rc-Dfo"/>
+                    </view>
+                    <connections>
+                        <outlet property="FeedbackWebView" destination="ewa-81-Oge" id="2eR-BF-kti"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isx-6h-Ob3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2592.8000000000002" y="701.19940029985014"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backButton" width="29" height="24"/>
+        <image name="calender_icon" width="93" height="50"/>
+        <image name="feedback" width="93" height="50"/>
+        <image name="gallery" width="93" height="50"/>
+        <image name="logo" width="115" height="38"/>
+        <image name="man" width="93" height="50"/>
+        <image name="notification" width="93" height="50"/>
+        <image name="slider1" width="950" height="400"/>
+    </resources>
+</document>

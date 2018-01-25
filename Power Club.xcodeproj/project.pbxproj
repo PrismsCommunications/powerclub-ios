@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C55746B20172DBB006FF89D /* blackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C55746A20172DBB006FF89D /* blackButton.swift */; };
+		1CE14C4A201629060094C802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE14C49201629060094C802 /* AppDelegate.swift */; };
+		1CE14C4C201629060094C802 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE14C4B201629060094C802 /* ViewController.swift */; };
+		1CE14C4F201629060094C802 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE14C4D201629060094C802 /* Main.storyboard */; };
+		1CE14C51201629060094C802 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CE14C50201629060094C802 /* Assets.xcassets */; };
+		1CE14C54201629060094C802 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE14C52201629060094C802 /* LaunchScreen.storyboard */; };
+		1CEB6A95201895870052AA56 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6A93201895860052AA56 /* SWRevealViewController.m */; };
+		1CEB6A97201896A10052AA56 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6A96201896A10052AA56 /* DashBoardViewController.swift */; };
+		1CEB6A99201896BB0052AA56 /* MenuItemsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6A98201896BB0052AA56 /* MenuItemsVC.swift */; };
+		1CEB6A9B2018CAC30052AA56 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6A9A2018CAC30052AA56 /* NotificationVC.swift */; };
+		1CEB6A9D2018CAFF0052AA56 /* YourProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6A9C2018CAFF0052AA56 /* YourProfileVC.swift */; };
+		1CEB6A9F2018CB700052AA56 /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6A9E2018CB700052AA56 /* FeedbackVC.swift */; };
+		1CEB6AA12018CB870052AA56 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6AA02018CB870052AA56 /* GalleryVC.swift */; };
+		1CEB6AA32018CC4C0052AA56 /* HolidaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6AA22018CC4C0052AA56 /* HolidaysVC.swift */; };
+		62C7088A9AC8AFCF91A27BD8 /* Pods_Power_Club.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 890ECBB8D1E9881F79B28891 /* Pods_Power_Club.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C55746A20172DBB006FF89D /* blackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blackButton.swift; sourceTree = "<group>"; };
+		1CE14C46201629060094C802 /* Power Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Power Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CE14C49201629060094C802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1CE14C4B201629060094C802 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1CE14C4E201629060094C802 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1CE14C50201629060094C802 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CE14C53201629060094C802 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1CE14C55201629060094C802 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CEB6A92201895860052AA56 /* Power Club-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Power Club-Bridging-Header.h"; sourceTree = "<group>"; };
+		1CEB6A93201895860052AA56 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../../Downloads/drive-download-20180124T101344Z-001/SWRevealViewController.m"; sourceTree = "<group>"; };
+		1CEB6A94201895870052AA56 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../Downloads/drive-download-20180124T101344Z-001/SWRevealViewController.h"; sourceTree = "<group>"; };
+		1CEB6A96201896A10052AA56 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
+		1CEB6A98201896BB0052AA56 /* MenuItemsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsVC.swift; sourceTree = "<group>"; };
+		1CEB6A9A2018CAC30052AA56 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
+		1CEB6A9C2018CAFF0052AA56 /* YourProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = YourProfileVC.swift; path = "/Users/prismscom/Desktop/TejasData/Power Club/Power Club/Controller/YourProfileVC.swift"; sourceTree = "<absolute>"; };
+		1CEB6A9E2018CB700052AA56 /* FeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
+		1CEB6AA02018CB870052AA56 /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
+		1CEB6AA22018CC4C0052AA56 /* HolidaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysVC.swift; sourceTree = "<group>"; };
+		890ECBB8D1E9881F79B28891 /* Pods_Power_Club.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Power_Club.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F9D7ECC272E4D8E1DE21A3B /* Pods-Power Club.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Power Club.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Power Club/Pods-Power Club.debug.xcconfig"; sourceTree = "<group>"; };
+		CA5078862F9989C60BC8A677 /* Pods-Power Club.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Power Club.release.xcconfig"; path = "Pods/Target Support Files/Pods-Power Club/Pods-Power Club.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CE14C43201629060094C802 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62C7088A9AC8AFCF91A27BD8 /* Pods_Power_Club.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C55746720172D7D006FF89D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C55746820172D86006FF89D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C55746A20172DBB006FF89D /* blackButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1C55746920172D8C006FF89D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1CEB6A9C2018CAFF0052AA56 /* YourProfileVC.swift */,
+				1CE14C4B201629060094C802 /* ViewController.swift */,
+				1CEB6A96201896A10052AA56 /* DashBoardViewController.swift */,
+				1CEB6A98201896BB0052AA56 /* MenuItemsVC.swift */,
+				1CEB6A9A2018CAC30052AA56 /* NotificationVC.swift */,
+				1CEB6A9E2018CB700052AA56 /* FeedbackVC.swift */,
+				1CEB6AA02018CB870052AA56 /* GalleryVC.swift */,
+				1CEB6AA22018CC4C0052AA56 /* HolidaysVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1C55746E2017435C006FF89D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1CEB6A94201895870052AA56 /* SWRevealViewController.h */,
+				1CEB6A93201895860052AA56 /* SWRevealViewController.m */,
+				1CEB6A92201895860052AA56 /* Power Club-Bridging-Header.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		1CE14C3D201629060094C802 = {
+			isa = PBXGroup;
+			children = (
+				1CE14C48201629060094C802 /* Power Club */,
+				1CE14C47201629060094C802 /* Products */,
+				8B79B98CD7798D61C142130E /* Pods */,
+				2733138888179202CD641877 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1CE14C47201629060094C802 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CE14C46201629060094C802 /* Power Club.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CE14C48201629060094C802 /* Power Club */ = {
+			isa = PBXGroup;
+			children = (
+				1C55746E2017435C006FF89D /* Utilities */,
+				1C55746920172D8C006FF89D /* Controller */,
+				1C55746820172D86006FF89D /* View */,
+				1C55746720172D7D006FF89D /* Model */,
+				1CE14C49201629060094C802 /* AppDelegate.swift */,
+				1CE14C4D201629060094C802 /* Main.storyboard */,
+				1CE14C50201629060094C802 /* Assets.xcassets */,
+				1CE14C52201629060094C802 /* LaunchScreen.storyboard */,
+				1CE14C55201629060094C802 /* Info.plist */,
+			);
+			path = "Power Club";
+			sourceTree = "<group>";
+		};
+		2733138888179202CD641877 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				890ECBB8D1E9881F79B28891 /* Pods_Power_Club.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B79B98CD7798D61C142130E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F9D7ECC272E4D8E1DE21A3B /* Pods-Power Club.debug.xcconfig */,
+				CA5078862F9989C60BC8A677 /* Pods-Power Club.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CE14C45201629060094C802 /* Power Club */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CE14C58201629070094C802 /* Build configuration list for PBXNativeTarget "Power Club" */;
+			buildPhases = (
+				E0912CEA5376AA934D04DCFC /* [CP] Check Pods Manifest.lock */,
+				1CE14C42201629060094C802 /* Sources */,
+				1CE14C43201629060094C802 /* Frameworks */,
+				1CE14C44201629060094C802 /* Resources */,
+				412F054291E9A76307F2865C /* [CP] Embed Pods Frameworks */,
+				9A32B69D246A792442090EF3 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Power Club";
+			productName = "Power Club";
+			productReference = 1CE14C46201629060094C802 /* Power Club.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CE14C3E201629060094C802 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Prisms Communications";
+				TargetAttributes = {
+					1CE14C45201629060094C802 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1CE14C41201629060094C802 /* Build configuration list for PBXProject "Power Club" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1CE14C3D201629060094C802;
+			productRefGroup = 1CE14C47201629060094C802 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CE14C45201629060094C802 /* Power Club */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CE14C44201629060094C802 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CE14C54201629060094C802 /* LaunchScreen.storyboard in Resources */,
+				1CE14C51201629060094C802 /* Assets.xcassets in Resources */,
+				1CE14C4F201629060094C802 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		412F054291E9A76307F2865C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Power Club/Pods-Power Club-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Power Club/Pods-Power Club-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A32B69D246A792442090EF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Power Club/Pods-Power Club-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0912CEA5376AA934D04DCFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Power Club-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CE14C42201629060094C802 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CEB6A99201896BB0052AA56 /* MenuItemsVC.swift in Sources */,
+				1CEB6A97201896A10052AA56 /* DashBoardViewController.swift in Sources */,
+				1C55746B20172DBB006FF89D /* blackButton.swift in Sources */,
+				1CE14C4C201629060094C802 /* ViewController.swift in Sources */,
+				1CE14C4A201629060094C802 /* AppDelegate.swift in Sources */,
+				1CEB6A9F2018CB700052AA56 /* FeedbackVC.swift in Sources */,
+				1CEB6AA32018CC4C0052AA56 /* HolidaysVC.swift in Sources */,
+				1CEB6AA12018CB870052AA56 /* GalleryVC.swift in Sources */,
+				1CEB6A95201895870052AA56 /* SWRevealViewController.m in Sources */,
+				1CEB6A9B2018CAC30052AA56 /* NotificationVC.swift in Sources */,
+				1CEB6A9D2018CAFF0052AA56 /* YourProfileVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1CE14C4D201629060094C802 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CE14C4E201629060094C802 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1CE14C52201629060094C802 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CE14C53201629060094C802 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CE14C56201629070094C802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1CE14C57201629070094C802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1CE14C59201629070094C802 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F9D7ECC272E4D8E1DE21A3B /* Pods-Power Club.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TCMLR59BNB;
+				INFOPLIST_FILE = "Power Club/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "topschool.cj.Power-Club";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Power Club/Utilities/Power Club-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1CE14C5A201629070094C802 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA5078862F9989C60BC8A677 /* Pods-Power Club.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TCMLR59BNB;
+				INFOPLIST_FILE = "Power Club/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "topschool.cj.Power-Club";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Power Club/Utilities/Power Club-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CE14C41201629060094C802 /* Build configuration list for PBXProject "Power Club" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CE14C56201629070094C802 /* Debug */,
+				1CE14C57201629070094C802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CE14C58201629070094C802 /* Build configuration list for PBXNativeTarget "Power Club" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CE14C59201629070094C802 /* Debug */,
+				1CE14C5A201629070094C802 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CE14C3E201629060094C802 /* Project object */;
+}
