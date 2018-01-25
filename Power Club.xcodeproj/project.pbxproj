@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C506A6A2019ED4C00865BD7 /* YourProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C506A692019ED4C00865BD7 /* YourProfileVC.swift */; };
+		1C506A6C2019EDE400865BD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C506A6B2019EDE400865BD7 /* GoogleService-Info.plist */; };
 		1C55746B20172DBB006FF89D /* blackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C55746A20172DBB006FF89D /* blackButton.swift */; };
 		1CE14C4A201629060094C802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE14C49201629060094C802 /* AppDelegate.swift */; };
 		1CE14C4C201629060094C802 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE14C4B201629060094C802 /* ViewController.swift */; };
@@ -17,7 +19,6 @@
 		1CEB6A97201896A10052AA56 /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6A96201896A10052AA56 /* DashBoardViewController.swift */; };
 		1CEB6A99201896BB0052AA56 /* MenuItemsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6A98201896BB0052AA56 /* MenuItemsVC.swift */; };
 		1CEB6A9B2018CAC30052AA56 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6A9A2018CAC30052AA56 /* NotificationVC.swift */; };
-		1CEB6A9D2018CAFF0052AA56 /* YourProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6A9C2018CAFF0052AA56 /* YourProfileVC.swift */; };
 		1CEB6A9F2018CB700052AA56 /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6A9E2018CB700052AA56 /* FeedbackVC.swift */; };
 		1CEB6AA12018CB870052AA56 /* GalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6AA02018CB870052AA56 /* GalleryVC.swift */; };
 		1CEB6AA32018CC4C0052AA56 /* HolidaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB6AA22018CC4C0052AA56 /* HolidaysVC.swift */; };
@@ -25,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C506A692019ED4C00865BD7 /* YourProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = YourProfileVC.swift; path = "/Users/prismscom/Desktop/TejasData/Power Club/Power Club/Controller/YourProfileVC.swift"; sourceTree = "<absolute>"; };
+		1C506A6B2019EDE400865BD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1C506A6D2019EE1000865BD7 /* Power Club.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Power Club.entitlements"; sourceTree = "<group>"; };
 		1C55746A20172DBB006FF89D /* blackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blackButton.swift; sourceTree = "<group>"; };
 		1CE14C46201629060094C802 /* Power Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Power Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE14C49201629060094C802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +43,6 @@
 		1CEB6A96201896A10052AA56 /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		1CEB6A98201896BB0052AA56 /* MenuItemsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsVC.swift; sourceTree = "<group>"; };
 		1CEB6A9A2018CAC30052AA56 /* NotificationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationVC.swift; sourceTree = "<group>"; };
-		1CEB6A9C2018CAFF0052AA56 /* YourProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = YourProfileVC.swift; path = "/Users/prismscom/Desktop/TejasData/Power Club/Power Club/Controller/YourProfileVC.swift"; sourceTree = "<absolute>"; };
 		1CEB6A9E2018CB700052AA56 /* FeedbackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
 		1CEB6AA02018CB870052AA56 /* GalleryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryVC.swift; sourceTree = "<group>"; };
 		1CEB6AA22018CC4C0052AA56 /* HolidaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaysVC.swift; sourceTree = "<group>"; };
@@ -78,7 +81,7 @@
 		1C55746920172D8C006FF89D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1CEB6A9C2018CAFF0052AA56 /* YourProfileVC.swift */,
+				1C506A692019ED4C00865BD7 /* YourProfileVC.swift */,
 				1CE14C4B201629060094C802 /* ViewController.swift */,
 				1CEB6A96201896A10052AA56 /* DashBoardViewController.swift */,
 				1CEB6A98201896BB0052AA56 /* MenuItemsVC.swift */,
@@ -121,6 +124,8 @@
 		1CE14C48201629060094C802 /* Power Club */ = {
 			isa = PBXGroup;
 			children = (
+				1C506A6D2019EE1000865BD7 /* Power Club.entitlements */,
+				1C506A6B2019EDE400865BD7 /* GoogleService-Info.plist */,
 				1C55746E2017435C006FF89D /* Utilities */,
 				1C55746920172D8C006FF89D /* Controller */,
 				1C55746820172D86006FF89D /* View */,
@@ -188,6 +193,11 @@
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -215,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CE14C54201629060094C802 /* LaunchScreen.storyboard in Resources */,
+				1C506A6C2019EDE400865BD7 /* GoogleService-Info.plist in Resources */,
 				1CE14C51201629060094C802 /* Assets.xcassets in Resources */,
 				1CE14C4F201629060094C802 /* Main.storyboard in Resources */,
 			);
@@ -231,11 +242,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Power Club/Pods-Power Club-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,10 +303,10 @@
 				1CE14C4A201629060094C802 /* AppDelegate.swift in Sources */,
 				1CEB6A9F2018CB700052AA56 /* FeedbackVC.swift in Sources */,
 				1CEB6AA32018CC4C0052AA56 /* HolidaysVC.swift in Sources */,
+				1C506A6A2019ED4C00865BD7 /* YourProfileVC.swift in Sources */,
 				1CEB6AA12018CB870052AA56 /* GalleryVC.swift in Sources */,
 				1CEB6A95201895870052AA56 /* SWRevealViewController.m in Sources */,
 				1CEB6A9B2018CAC30052AA56 /* NotificationVC.swift in Sources */,
-				1CEB6A9D2018CAFF0052AA56 /* YourProfileVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,12 +445,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Power Club/Power Club.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCMLR59BNB;
 				INFOPLIST_FILE = "Power Club/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "topschool.cj.Power-Club";
+				PRODUCT_BUNDLE_IDENTIFIER = topschool.cj.powerclub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Power Club/Utilities/Power Club-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -452,12 +466,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Power Club/Power Club.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCMLR59BNB;
 				INFOPLIST_FILE = "Power Club/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "topschool.cj.Power-Club";
+				PRODUCT_BUNDLE_IDENTIFIER = topschool.cj.powerclub;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Power Club/Utilities/Power Club-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;

@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/prismscom/Desktop/TejasData/Power Club/Power Club/Controller/YourProfileVC.swift">
-   </FileRef>
-   <FileRef
       location = "group:Power Club.xcodeproj">
    </FileRef>
    <FileRef
