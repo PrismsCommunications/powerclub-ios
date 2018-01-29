@@ -15,21 +15,11 @@ class NotificationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.hidesBackButton = true
-        
-        let newBackButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.plain , target: self, action: #selector(NotificationVC.back(sender:)))
-        
-        self.navigationItem.leftBarButtonItem = newBackButton
 
         let url =  URL(string: "http://clubhybridmodules.prisms.in/notifications/200/492")
         let request = URLRequest(url: url!)
         
         notificationWebview.load(request)
-    }
-    
-    @objc func back(sender: UIBarButtonItem) {
-        _ = navigationController?.popViewController(animated: true)
     }
     
 

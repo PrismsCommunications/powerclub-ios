@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,25 +17,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Jj1-0p-nai">
-                                <rect key="frame" x="100" y="220" width="175" height="38"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clubapp_icon" translatesAutoresizingMaskIntoConstraints="NO" id="eE1-bP-4At">
+                                <rect key="frame" x="100" y="120" width="175" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="0eR-Kt-Kgy"/>
+                                </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lP5-u5-AB1">
+                                <rect key="frame" x="10" y="320" width="355" height="70.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKo-Bb-o0x">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="wEt-N7-S0P">
+                                        <rect key="frame" x="0.0" y="32.5" width="355" height="38"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Jj1-0p-nai" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="4gE-eR-332"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jj1-0p-nai" secondAttribute="trailing" constant="100" id="9EM-cc-Gq0"/>
-                            <constraint firstItem="Jj1-0p-nai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="ntA-92-wNM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lP5-u5-AB1" secondAttribute="trailing" constant="10" id="75c-t4-b3p"/>
+                            <constraint firstItem="lP5-u5-AB1" firstAttribute="top" secondItem="eE1-bP-4At" secondAttribute="bottom" constant="50" id="99o-Q7-xy7"/>
+                            <constraint firstItem="lP5-u5-AB1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="EYD-IA-17E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eE1-bP-4At" secondAttribute="trailing" constant="100" id="JFZ-zX-Vvj"/>
+                            <constraint firstItem="eE1-bP-4At" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="e5c-pp-9CJ"/>
+                            <constraint firstItem="eE1-bP-4At" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="lgH-vj-YrV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>
+        <image name="clubapp_icon" width="256" height="256"/>
         <image name="logo" width="115" height="38"/>
     </resources>
 </document>
