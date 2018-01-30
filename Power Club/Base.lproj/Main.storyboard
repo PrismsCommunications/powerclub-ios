@@ -12,20 +12,17 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Power_Club" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="BYZ-38-t0r" customClass="ViewController" customModule="Power_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xtG-c9-q8f">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" red="0.34180477050000002" green="0.62469875220000004" blue="0.98119290329999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="oyR-eu-Z74">
-                                <rect key="frame" x="100" y="70" width="175" height="38"/>
+                                <color key="backgroundColor" red="0.50543546676635742" green="0.76755708456039429" blue="0.91500365734100342" alpha="0.45267932046979864" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="MoJ-Tq-rjS">
-                                <rect key="frame" x="20" y="148" width="335" height="189"/>
+                                <rect key="frame" x="20" y="225" width="335" height="136"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Registered Mobile Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IXi-HU-rEH">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
@@ -33,15 +30,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-0O-mBu">
-                                        <rect key="frame" x="0.0" y="53" width="335" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnn-Y2-R8j">
-                                        <rect key="frame" x="0.0" y="106" width="335" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.40061346476510068" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="53" width="335" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Generate OTP">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -49,48 +40,61 @@
                                             <action selector="GenerateOTP:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xrK-im-Obq"/>
                                         </connections>
                                     </button>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Try Again.." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Dn-zn-AvP">
+                                        <rect key="frame" x="0.0" y="94.5" width="335" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.97053593397140503" green="0.18830499053001404" blue="0.047920860350131989" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7y-3W-IYo">
-                                        <rect key="frame" x="0.0" y="159" width="335" height="30"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.39521287751677853" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="frame" x="0.0" y="106" width="335" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="LoginDemo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAb-mW-sqR"/>
                                             <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pDw-o3-ph8"/>
                                             <segue destination="uZf-mE-Vit" kind="show" id="YLo-3j-3sS"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clubapp_icon" translatesAutoresizingMaskIntoConstraints="NO" id="q9f-n6-Lzi">
+                                <rect key="frame" x="130" y="75" width="115" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Lyt-sY-nUW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xtG-c9-q8f" secondAttribute="bottom" id="11n-WU-KJm"/>
-                            <constraint firstItem="MoJ-Tq-rjS" firstAttribute="top" secondItem="oyR-eu-Z74" secondAttribute="bottom" constant="40" id="72o-pc-AJ4"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oyR-eu-Z74" secondAttribute="trailing" constant="100" id="EEy-C5-rGK"/>
+                            <constraint firstItem="q9f-n6-Lzi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="BKc-bD-6hn"/>
                             <constraint firstItem="xtG-c9-q8f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LTh-df-0AD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MoJ-Tq-rjS" secondAttribute="trailing" constant="20" id="Ns3-tg-d3L"/>
                             <constraint firstItem="xtG-c9-q8f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qbe-EZ-wcz"/>
+                            <constraint firstItem="q9f-n6-Lzi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="XQs-Ne-N1x"/>
+                            <constraint firstItem="MoJ-Tq-rjS" firstAttribute="top" secondItem="q9f-n6-Lzi" secondAttribute="bottom" constant="50" id="Ywq-I4-eIC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xtG-c9-q8f" secondAttribute="trailing" id="ZoE-vs-tIq"/>
                             <constraint firstItem="MoJ-Tq-rjS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f56-NX-FZn"/>
-                            <constraint firstItem="oyR-eu-Z74" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="nfj-1I-REN"/>
-                            <constraint firstItem="oyR-eu-Z74" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="ttU-yo-sgF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q9f-n6-Lzi" secondAttribute="trailing" constant="130" id="ylj-fw-t8l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="ErrorMsg" destination="4Dn-zn-AvP" id="GcE-G3-rJp"/>
                         <outlet property="txtMobileNo" destination="IXi-HU-rEH" id="Q5P-ZO-pYY"/>
-                        <outlet property="txtOtp" destination="nMZ-0O-mBu" id="DZ7-yQ-Mff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452" y="109"/>
+            <point key="canvasLocation" x="-452" y="108.39580209895054"/>
         </scene>
         <!--Dashboard-->
         <scene sceneID="5mA-zc-NP2">
             <objects>
-                <viewController title="Dashboard" id="y7p-Ww-9qd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dashboard" title="Dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y7p-Ww-9qd" customClass="DashBoardViewController" customModule="Power_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S6K-dX-QTV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -362,6 +366,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VXN-rP-lhW">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.98945945501327515" green="0.98349982500076294" blue="0.96582072973251343" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.34760868549346924" green="0.41402041912078857" blue="0.91129559278488159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.996257483959198" green="0.99363070726394653" blue="0.99299103021621704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -375,9 +384,9 @@
     </scenes>
     <resources>
         <image name="calender_icon" width="93" height="50"/>
+        <image name="clubapp_icon" width="256" height="256"/>
         <image name="feedback" width="93" height="50"/>
         <image name="gallery" width="93" height="50"/>
-        <image name="logo" width="115" height="38"/>
         <image name="man" width="93" height="50"/>
         <image name="notification" width="93" height="50"/>
         <image name="slider1" width="950" height="400"/>

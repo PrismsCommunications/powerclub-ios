@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>198309040567-oc0v6gok71707k78av806o7pei6gtcpk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.198309040567-oc0v6gok71707k78av806o7pei6gtcpk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDYQ0X231BjOdnepkC0G_Rvki2Le4JlTvY</string>
+	<key>GCM_SENDER_ID</key>
+	<string>198309040567</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>topschool.cj.powerclub</string>
+	<key>PROJECT_ID</key>
+	<string>powerclub-b97f0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>powerclub-b97f0.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:198309040567:ios:ada2a5d5836ac269</string>
+	<key>DATABASE_URL</key>
+	<string>https://powerclub-b97f0.firebaseio.com</string>
+</dict>
+</plist>

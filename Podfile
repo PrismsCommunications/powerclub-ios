@@ -6,5 +6,7 @@ target 'Power Club' do
 
   pod 'SwiftyJSON'
   pod 'Alamofire’
+  pod ‘Firebase/Core’
+  pod ‘Firebase/Messaging’
 
 end
