@@ -39,7 +39,7 @@ class ViewController: UIViewController {
 
     @IBAction func GenerateOTP(_ sender: Any)
     {
-        var mobile = txtMobileNo.text
+        var mobile_ = txtMobileNo.text
         
         guard let url = URL(string: "http://topschool.prisms.in/rest/index.php/user_list.json") else { return }
         
