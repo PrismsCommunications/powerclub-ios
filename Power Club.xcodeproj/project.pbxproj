@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2720682026FC5200976DE9 /* PowerclubModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C2720662026FC5200976DE9 /* PowerclubModel.xcdatamodeld */; };
 		1C506A6A2019ED4C00865BD7 /* YourProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C506A692019ED4C00865BD7 /* YourProfileVC.swift */; };
 		1C506A6C2019EDE400865BD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C506A6B2019EDE400865BD7 /* GoogleService-Info.plist */; };
 		1C55746B20172DBB006FF89D /* blackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C55746A20172DBB006FF89D /* blackButton.swift */; };
+		1CA1D2A920282B590016EA8A /* UserDetailsDBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1D2A820282B590016EA8A /* UserDetailsDBHandler.swift */; };
 		1CE14C4A201629060094C802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE14C49201629060094C802 /* AppDelegate.swift */; };
 		1CE14C4C201629060094C802 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE14C4B201629060094C802 /* ViewController.swift */; };
 		1CE14C4F201629060094C802 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE14C4D201629060094C802 /* Main.storyboard */; };
@@ -26,10 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C2720672026FC5200976DE9 /* PowerclubModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PowerclubModel.xcdatamodel; sourceTree = "<group>"; };
 		1C506A692019ED4C00865BD7 /* YourProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = YourProfileVC.swift; path = "/Users/prismscom/Desktop/TejasData/Power Club/Power Club/Controller/YourProfileVC.swift"; sourceTree = "<absolute>"; };
 		1C506A6B2019EDE400865BD7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1C506A6D2019EE1000865BD7 /* Power Club.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Power Club.entitlements"; sourceTree = "<group>"; };
 		1C55746A20172DBB006FF89D /* blackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blackButton.swift; sourceTree = "<group>"; };
+		1CA1D2A820282B590016EA8A /* UserDetailsDBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsDBHandler.swift; sourceTree = "<group>"; };
 		1CE14C46201629060094C802 /* Power Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Power Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE14C49201629060094C802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CE14C4B201629060094C802 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 		1C55746720172D7D006FF89D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1CA1D2A820282B590016EA8A /* UserDetailsDBHandler.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 		1CE14C3D201629060094C802 = {
 			isa = PBXGroup;
 			children = (
+				1C2720662026FC5200976DE9 /* PowerclubModel.xcdatamodeld */,
 				1CE14C48201629060094C802 /* Power Club */,
 				1CE14C47201629060094C802 /* Products */,
 				8B79B98CD7798D61C142130E /* Pods */,
@@ -304,9 +310,11 @@
 				1CEB6A9F2018CB700052AA56 /* FeedbackVC.swift in Sources */,
 				1CEB6AA32018CC4C0052AA56 /* HolidaysVC.swift in Sources */,
 				1C506A6A2019ED4C00865BD7 /* YourProfileVC.swift in Sources */,
+				1CA1D2A920282B590016EA8A /* UserDetailsDBHandler.swift in Sources */,
 				1CEB6AA12018CB870052AA56 /* GalleryVC.swift in Sources */,
 				1CEB6A95201895870052AA56 /* SWRevealViewController.m in Sources */,
 				1CEB6A9B2018CAC30052AA56 /* NotificationVC.swift in Sources */,
+				1C2720682026FC5200976DE9 /* PowerclubModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +510,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1C2720662026FC5200976DE9 /* PowerclubModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1C2720672026FC5200976DE9 /* PowerclubModel.xcdatamodel */,
+			);
+			currentVersion = 1C2720672026FC5200976DE9 /* PowerclubModel.xcdatamodel */;
+			path = PowerclubModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1CE14C3E201629060094C802 /* Project object */;
 }
