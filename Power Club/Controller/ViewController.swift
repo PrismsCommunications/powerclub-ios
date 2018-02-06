@@ -15,8 +15,10 @@ import FirebaseMessaging
 import SwiftyJSON
 import UserNotifications
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var ExistingUserLabel: UILabel!
+    @IBOutlet weak var ExistingUsersTable: UITableView!
     var db: OpaquePointer?
     @IBOutlet weak var errorOTP: UILabel!
     @IBOutlet weak var login: UIButton!
@@ -38,6 +40,19 @@ class ViewController: UIViewController {
         login.isHidden = true
         errorOTP.isHidden = true
         
+        User = UserDetailsDBHandler.fetchObject()
+        for i in User!
+        {
+            print(i.username!)
+            ExitsingUserList.insert("\(i.username!)", at: 0)
+            print("array--> \(ExitsingUserList)")
+        }
+        
+        ExistingUsersTable.layer.masksToBounds = true
+        ExistingUsersTable.layer.borderColor = UIColor(displayP3Red: 153/255, green: 153/255, blue: 0/255, alpha: 1.0).cgColor
+        ExistingUsersTable.layer.borderWidth = 2.0
+        self.ExistingUsersTable.register(UITableViewCell.self , forCellReuseIdentifier: "cell")
+        print(User!)
         
         
         let fileUrl = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("clubDatabase.sqlite")
@@ -47,20 +62,17 @@ class ViewController: UIViewController {
         }
         
         //let createTableQuery = "CREATE TABLE IF NOT EXISTS studentDetails(id)"
-        
-        
-        
+
     }
     
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        txtOtp.resignFirstResponder()
+        txtMobileNo.resignFirstResponder()
+    }
    
     @IBAction func GenerateOTP(_ sender: UIButton)
     {
-        if (txtMobileNo != nil) {
-            
-            txtOtp.isHidden = false
-            self.txtOtp.becomeFirstResponder()
-            login.isHidden = false
-            sender.isHidden = true
+        if (txtMobileNo != nil ) {
             
             var gcmid2 = ""
             if let gcmid1 = FIRInstanceID.instanceID().token() {
@@ -74,20 +86,32 @@ class ViewController: UIViewController {
             
             let mobile = txtMobileNo.text! as String
             let DeviceId = UIDevice.current.identifierForVendor!.uuidString
-            if (mobile == "9999999999")
+            if (mobile.isEmpty)
             {
-                print("log mobile apple test ")
+                errorOTP.text = "Please Check Mobile Number"
             }
             else
             {
-                print("log General------->")
+                txtOtp.isHidden = false
+                self.txtOtp.becomeFirstResponder()
+                login.isHidden = false
+                sender.isHidden = true
                 
-                let result = RegiserNewUser(mobile_no: mobile, device_id: DeviceId, gcm_id: gcmid)
-                
-                if(result == false)
+                if (mobile == "9999999999")
                 {
-                    errorOTP.isHidden = false
-                    errorOTP.text = "Something Went Wrong.."
+                    print("log mobile apple test ")
+                }
+                else
+                {
+                    print("log General------->")
+                    
+                    let result = RegiserNewUser(mobile_no: mobile, device_id: DeviceId, gcm_id: gcmid)
+                    
+                    if(result == false)
+                    {
+                        errorOTP.isHidden = false
+                        errorOTP.text = "Something Went Wrong.."
+                    }
                 }
             }
         }
@@ -95,33 +119,42 @@ class ViewController: UIViewController {
     
     @IBAction func login(_ sender: UIButton) {
         
+        let tapGesture = UITapGestureRecognizer(target: self, action:#selector(self.dismissKeyboard (_:)))
+        self.view.addGestureRecognizer(tapGesture)
+        
         let otp = txtOtp.text!
         let mobile = txtMobileNo.text!
-        if(otp == "5555")
+        if (otp.isEmpty && mobile.isEmpty)
         {
-            performSegue(withIdentifier: "toNavigationBar", sender: nil)
+            errorOTP.text = "Fields Should Not Empty"
         }
         else
         {
-            let result = VerifyUserWithOTP(otp: otp, mobile : mobile)
-            if(result == true)
+            if(otp == "5555")
             {
                 performSegue(withIdentifier: "toNavigationBar", sender: nil)
             }
             else
             {
+                let result = VerifyUserWithOTP(otp: otp, mobile : mobile)
                 if(result == true)
                 {
                     performSegue(withIdentifier: "toNavigationBar", sender: nil)
                 }
                 else
                 {
-                    print("log verify OTP\(result)")
-                    errorOTP.isHidden = false
-                    errorOTP.text = "Something Went Wrong.."
+                    if(result == true)
+                    {
+                        performSegue(withIdentifier: "toNavigationBar", sender: nil)
+                    }
+                    else
+                    {
+                        print("log verify OTP\(result)")
+                        errorOTP.text = "Something Went Wrong.."
+                    }
                 }
+                // Load the data
             }
-            // Load the data
         }
     }
     
@@ -151,9 +184,17 @@ class ViewController: UIViewController {
         let gcmidx = myStringArr[1]
         //print(gcmid)
         
+//       {"mobile_no": "8888876264",
+//        "school": "Test PowerClub",
+//        "otpValue": "4886",
+//        "deviceId": "5F6A3FBD-7A34-48F9-A66B-E401E1C14FB3",
+//        "sid": "492",
+//        "fun_name": "varifyUserByOTPForApple",
+//        "tokenId": "APA91bGfrz6oxyjzBpo4wbLZibf40xHaWy78bOh9V1ikIinLieuusr_VeAqkUh8lAlE5QgnwR9moaLs6k1X9TLRvnJbzZAFZ6xXlYNI67K5qWGWpcAufUUmmB50UN7on_i7NsXsYF1mI"}
+        
         
         let jsonData = ["sid":"492",
-                        "fun_name":"verifyUserByOTPForApple",
+                        "fun_name":"varifyUserByOTPForApple",
                         "mobile_no":"\(mobile)",
             "deviceId":"\(DeviceId)",
             "tokenId":"\(gcmidx)",
@@ -183,43 +224,40 @@ class ViewController: UIViewController {
                     print(json)
                     let result = JSON(json)
                     responce = result["size"].stringValue
-                    
+                    let ss = result["records"].object
                     if responce == "1"
                     {
-                        print("log response \(responce)")
-                        for item in result["records"].arrayValue {
-                            
-                            gcmid = item["gcmid"].stringValue
-                            acadamicId = item["acadamicId"].stringValue
-                            sid = item["sid"].stringValue
-                            urlkey = item["urlkey"].stringValue
-
-                            print(item["gcmid"].stringValue)
-                            print(item["acadamicId"].stringValue)
-                            print(item["sid"].stringValue)
-                            print(item["urlkey"].stringValue)
-                        }
+                        let records = JSON(ss)
+                        gcmid = records["gcmid"].stringValue
+                        sid = records["sid"].stringValue
+                        urlkey = records["url_key"].stringValue
                         
                         for i in result["userDetails"].arrayValue {
-                            
                             userID = i["id"].stringValue
                             username = i["user_name"].stringValue
-                            
-                            print(i["id"].stringValue)
-                            print(i["user_name"].stringValue)
-                            
                         }
                         
-
-                        if UserDetailsDBHandler.saveObject(userId: userID, username: username ,
-                         mobile_no: mobile , club_id : sid , deevice_id : DeviceId, gcm_id : gcmid)
+                        var User = UserDetailsDBHandler.searchdata(mobile_no: mobile)
+                        print(User!)
+                        if(User == nil || (User?.isEmpty)!)
                         {
-                            self.User = UserDetailsDBHandler.fetchObject()
 
-                            for i in self.User!
+                            if UserDetailsDBHandler.saveObject(userId: userID, username: username ,
+                             mobile_no: mobile , club_id : sid , device_id : DeviceId, gcm_id : gcmid)
                             {
-                                print(i.username!)
+                                self.User = UserDetailsDBHandler.fetchObject()
+
+                                for i in self.User!
+                                {
+                                    print(i.username!)
+                                }
                             }
+                        }
+                        else
+                        {
+                            self.ExistingUsersTable.isHidden = false
+                            self.ExistingUserLabel.isHidden = false
+                            self.ExistingUserLabel.text = "User already Exits.."
                         }
                     }
                 }
@@ -234,11 +272,13 @@ class ViewController: UIViewController {
         if responce == "1"
         {
             print("log Verify OTP true\(responce)")
+            performSegue(withIdentifier: "toNavigationBar", sender: nil)
             return true
         }
         else if responce == "2"
         {
             print("log Verify OTP true\(responce)")
+            performSegue(withIdentifier: "toNavigationBar", sender: nil)
             return true
         }
         else
@@ -314,6 +354,23 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.ExitsingUserList.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Selected...")
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell : UITableViewCell = self.ExistingUsersTable.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
+        cell.textLabel?.text = ExitsingUserList[indexPath.row]
+        
+        return cell
     }
 }
 

@@ -27,8 +27,8 @@
                                     <constraint firstAttribute="height" constant="100" id="8Lv-kt-EKY"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="MoJ-Tq-rjS">
-                                <rect key="frame" x="20" y="220" width="335" height="229"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="MoJ-Tq-rjS">
+                                <rect key="frame" x="20" y="190" width="335" height="165"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Registered Mobile Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IXi-HU-rEH">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
@@ -36,14 +36,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" textContentType="tel"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter OTP" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-0O-mBu">
-                                        <rect key="frame" x="0.0" y="53" width="335" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter OTP" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nMZ-0O-mBu">
+                                        <rect key="frame" x="0.0" y="37" width="335" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnn-Y2-R8j">
-                                        <rect key="frame" x="0.0" y="106" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="74" width="335" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.40061346476510068" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Generate OTP">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -53,7 +53,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7y-3W-IYo">
-                                        <rect key="frame" x="0.0" y="159" width="335" height="30"/>
+                                        <rect key="frame" x="0.0" y="111" width="335" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.39521287751677853" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,32 +64,56 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect OTP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Kf-R4-Ym5">
-                                        <rect key="frame" x="0.0" y="212" width="335" height="17"/>
+                                        <rect key="frame" x="0.0" y="148" width="335" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.99040188074111934" green="0.16964294548913417" blue="0.094834796436604682" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Existing Users" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1sd-pV-YbV">
+                                <rect key="frame" x="100" y="365" width="175" height="24"/>
+                                <color key="backgroundColor" red="0.74591863992327134" green="0.9090093693576965" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nUi-Uy-xeC">
+                                <rect key="frame" x="100" y="389.5" width="175" height="192.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fQZ-JX-bo4"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="30x-BB-7lO"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xtG-c9-q8f" secondAttribute="bottom" id="11n-WU-KJm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1sd-pV-YbV" secondAttribute="trailing" constant="100" id="4kO-Xp-3L0"/>
+                            <constraint firstItem="1sd-pV-YbV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="54i-JA-Bp1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nUi-Uy-xeC" secondAttribute="bottom" constant="85" id="66H-BV-jLa"/>
+                            <constraint firstItem="1sd-pV-YbV" firstAttribute="top" secondItem="MoJ-Tq-rjS" secondAttribute="bottom" constant="10" id="BfN-ed-oun"/>
                             <constraint firstItem="xtG-c9-q8f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LTh-df-0AD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MoJ-Tq-rjS" secondAttribute="trailing" constant="20" id="Ns3-tg-d3L"/>
                             <constraint firstItem="xtG-c9-q8f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Qbe-EZ-wcz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RDG-y2-jCf" secondAttribute="trailing" constant="120" id="RhQ-J1-bTJ"/>
                             <constraint firstItem="RDG-y2-jCf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="RoH-tK-9ND"/>
                             <constraint firstItem="RDG-y2-jCf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="Soy-ed-BDF"/>
+                            <constraint firstItem="nUi-Uy-xeC" firstAttribute="top" secondItem="1sd-pV-YbV" secondAttribute="bottom" id="U6T-RZ-DpG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xtG-c9-q8f" secondAttribute="trailing" id="ZoE-vs-tIq"/>
-                            <constraint firstItem="MoJ-Tq-rjS" firstAttribute="top" secondItem="RDG-y2-jCf" secondAttribute="bottom" constant="50" id="dJH-zC-MpT"/>
+                            <constraint firstItem="nUi-Uy-xeC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="btc-4r-PBd"/>
+                            <constraint firstItem="MoJ-Tq-rjS" firstAttribute="top" secondItem="RDG-y2-jCf" secondAttribute="bottom" constant="20" id="dJH-zC-MpT"/>
                             <constraint firstItem="MoJ-Tq-rjS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="f56-NX-FZn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nUi-Uy-xeC" secondAttribute="trailing" constant="100" id="l9V-cV-vom"/>
                             <constraint firstItem="MoJ-Tq-rjS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tqb-rP-d2d"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MoJ-Tq-rjS" secondAttribute="trailing" constant="20" id="yqS-pT-7M5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="ExistingUserLabel" destination="1sd-pV-YbV" id="JCI-RJ-UIB"/>
+                        <outlet property="ExistingUsersTable" destination="nUi-Uy-xeC" id="5cu-mX-xPB"/>
                         <outlet property="errorOTP" destination="4Kf-R4-Ym5" id="b8U-05-XNs"/>
                         <outlet property="login" destination="q7y-3W-IYo" id="5Ms-hp-Hcd"/>
                         <outlet property="txtMobileNo" destination="IXi-HU-rEH" id="Q5P-ZO-pYY"/>

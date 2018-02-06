@@ -20,7 +20,7 @@ class UserDetailsDBHandler: NSObject {
     }
     
     class func saveObject(userId: String, username: String
-        , mobile_no: String , club_id : String , deevice_id : String , gcm_id : String) -> Bool{
+        , mobile_no: String , club_id : String , device_id : String , gcm_id : String) -> Bool{
         let context = getContext()
         let entity = NSEntityDescription.entity(forEntityName: "UserDetails", in: context)
         let manageObject = NSManagedObject(entity: entity!, insertInto: context)
@@ -29,7 +29,7 @@ class UserDetailsDBHandler: NSObject {
         manageObject.setValue(username, forKey: "username")
         manageObject.setValue(mobile_no, forKey: "mobile_no")
         manageObject.setValue(club_id, forKey: "club_id")
-        manageObject.setValue(deevice_id, forKey: "deevice_id")
+        manageObject.setValue(device_id, forKey: "device_id")
         manageObject.setValue(gcm_id, forKey: "gcm_id")
         
         do{
@@ -53,12 +53,12 @@ class UserDetailsDBHandler: NSObject {
         }
     }
     
-    class func searchdata(username: String) -> [UserDetails]? {
+    class func searchdata(mobile_no: String) -> [UserDetails]? {
         let context = getContext()
         let fetchRQ : NSFetchRequest<UserDetails> = UserDetails.fetchRequest()
         var User:[UserDetails]? = nil
         
-        let predicate = NSPredicate(format: "username contains[c] %@", username)
+        let predicate = NSPredicate(format: "mobile_no contains[c] %@", mobile_no)
         fetchRQ.predicate = predicate
         
         do{
