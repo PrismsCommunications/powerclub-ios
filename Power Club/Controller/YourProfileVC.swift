@@ -11,16 +11,34 @@ import WebKit
 class YourProfileVC: UIViewController {
 
     @IBOutlet weak var profileWebview: WKWebView!
-
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    var User:[UserDetails]? = nil
+    var userId: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url =  URL(string: "http://clubhybridmodules.prisms.in/memberdetails/200/492")
+        var userId: Int? = nil
+        User = UserDetailsDBHandler.fetchObject()
+        for i in User!
+        {
+            userId = Int(i.userId!)!
+        }
         
-        let request = URLRequest(url: url!)
-        
-        profileWebview.load(request)
+        if  let id = userId{
+            print(id)
+            let url =  NSURL(string: "http://clubhybridmodules.prisms.in/memberdetails/\(id)/492")
+            let request = NSURLRequest(url: url! as URL)
+            profileWebview.load(request as URLRequest)
+        }
+    }
+
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        self.loading.startAnimating()
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        self.loading.stopAnimating()
     }
 
     override func didReceiveMemoryWarning() {

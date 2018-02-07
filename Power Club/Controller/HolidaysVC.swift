@@ -12,17 +12,36 @@ import WebKit
 class HolidaysVC: UIViewController {
 
     @IBOutlet weak var HolidaysWebview: WKWebView!
-    
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    var User:[UserDetails]? = nil
+    var userId: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let url =  URL(string: "http://clubhybridmodules.prisms.in/holidays/200/492")
-        let request = URLRequest(url: url!)
         
-        HolidaysWebview.load(request)
+        var userId: Int? = nil
+        User = UserDetailsDBHandler.fetchObject()
+        for i in User!
+        {
+            userId = Int(i.userId!)!
+        }
+        
+        if  let id = userId{
+            print(id)
+            let url =  NSURL(string: "http://clubhybridmodules.prisms.in/holidays/\(id)/492")
+            let request = NSURLRequest(url: url! as URL)
+            HolidaysWebview.load(request as URLRequest)
+        }
     }
 
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        self.loading.startAnimating()
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        self.loading.stopAnimating()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

@@ -13,14 +13,37 @@ class GalleryVC: UIViewController {
     
     
     @IBOutlet weak var GalleryWebview: WKWebView!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    var User:[UserDetails]? = nil
+    var userId: String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let url =  URL(string: "http://topschooldev.prisms.in/hybrid/gallery/index.php?sid=258&fun_name=getAlbumDetailsHybrid&userId=469")
-        let request = URLRequest(url: url!)
+        var userId: Int? = nil
+        User = UserDetailsDBHandler.fetchObject()
+        for i in User!
+        {
+            userId = Int(i.userId!)!
+        }
         
-        GalleryWebview.load(request)
+        if  let id = userId {
+            print(id)
+            if let url =  NSURL(string: "https://testclub.prisms.in/hybrid/gallery/index.php?sid=492&fun_name=getAlbumDetailsHybrid&userId=\(id)")
+            {
+                print(url)
+                let request = NSURLRequest(url: url as URL)
+                GalleryWebview.load(request as URLRequest)
+            }
+        }
+    }
+    
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        self.loading.startAnimating()
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        self.loading.stopAnimating()
     }
 
     override func didReceiveMemoryWarning() {

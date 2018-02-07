@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SQLite3
 import Firebase
 import FirebaseInstanceID
 import FirebaseCore
@@ -15,11 +14,8 @@ import FirebaseMessaging
 import SwiftyJSON
 import UserNotifications
 
-class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController{
     
-    @IBOutlet weak var ExistingUserLabel: UILabel!
-    @IBOutlet weak var ExistingUsersTable: UITableView!
-    var db: OpaquePointer?
     @IBOutlet weak var errorOTP: UILabel!
     @IBOutlet weak var login: UIButton!
     @IBOutlet weak var txtOtp: UITextField!
@@ -40,29 +36,29 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         login.isHidden = true
         errorOTP.isHidden = true
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         User = UserDetailsDBHandler.fetchObject()
         for i in User!
         {
             print(i.username!)
             ExitsingUserList.insert("\(i.username!)", at: 0)
             print("array--> \(ExitsingUserList)")
+            
         }
         
-        ExistingUsersTable.layer.masksToBounds = true
-        ExistingUsersTable.layer.borderColor = UIColor(displayP3Red: 153/255, green: 153/255, blue: 0/255, alpha: 1.0).cgColor
-        ExistingUsersTable.layer.borderWidth = 2.0
-        self.ExistingUsersTable.register(UITableViewCell.self , forCellReuseIdentifier: "cell")
-        print(User!)
+        print(self.ExitsingUserList.count)
+        let cmnt = self.ExitsingUserList.count
         
-        
-        let fileUrl = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("clubDatabase.sqlite")
-        
-        if sqlite3_open(fileUrl.path, &db) != SQLITE_OK {
-            print("log Error Operating Database")
+        if(cmnt == 0)
+        {
+            print("No User Found")
         }
-        
-        //let createTableQuery = "CREATE TABLE IF NOT EXISTS studentDetails(id)"
-
+        else
+        {
+            performSegue(withIdentifier: "toNavigationBar", sender: nil)
+        }
     }
     
     @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
@@ -72,7 +68,10 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
    
     @IBAction func GenerateOTP(_ sender: UIButton)
     {
-        if (txtMobileNo != nil ) {
+        errorOTP.isHidden = true
+        let cnt = (txtMobileNo.text!).count
+        print("count :-\(cnt)")
+        if (txtMobileNo != nil && cnt == 10) {
             
             var gcmid2 = ""
             if let gcmid1 = FIRInstanceID.instanceID().token() {
@@ -88,6 +87,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             let DeviceId = UIDevice.current.identifierForVendor!.uuidString
             if (mobile.isEmpty)
             {
+                errorOTP.isHidden = false
                 errorOTP.text = "Please Check Mobile Number"
             }
             else
@@ -100,6 +100,28 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                 if (mobile == "9999999999")
                 {
                     print("log mobile apple test ")
+                    let User = UserDetailsDBHandler.searchdata(mobile_no: mobile)
+                    print(User!)
+                    if(User == nil || (User?.isEmpty)!)
+                    {
+                        
+                        if UserDetailsDBHandler.saveObject(userId: "42295", username: "gokul-bairagi64" ,
+                                                           mobile_no: mobile , club_id : "492" , device_id : "5F6A3FBD-7A34-48F9-A66B-E401E1C14FB3", gcm_id : "APA91bGfrz6oxyjzBpo4wbLZibf40xHaWy78bOh9V1ikIinLieuusr_VeAqkUh8lAlE5QgnwR9moaLs6k1X9TLRvnJbzZAFZ6xXlYNI67K5qWGWpcAufUUmmB50UN7on_i7NsXsYF1mI")
+                        {
+                            self.User = UserDetailsDBHandler.fetchObject()
+                            
+                            for i in self.User!
+                            {
+                                print(i.username!)
+                            }
+                        }
+                    }
+                    else
+                    {
+                        self.errorOTP.isHidden = false
+                        self.errorOTP.text = "User already Exits.."
+                    }
+                    
                 }
                 else
                 {
@@ -110,10 +132,15 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                     if(result == false)
                     {
                         errorOTP.isHidden = false
-                        errorOTP.text = "Something Went Wrong.."
+                        errorOTP.text = "User Is Not Registered.."
                     }
                 }
             }
+        }
+        else
+        {
+            errorOTP.isHidden = false
+            errorOTP.text = "Please enter valid Mobile Number"
         }
     }
     
@@ -124,9 +151,12 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         
         let otp = txtOtp.text!
         let mobile = txtMobileNo.text!
-        if (otp.isEmpty && mobile.isEmpty)
+        
+        let optcnt = otp.count
+        
+        if (otp.isEmpty && mobile.isEmpty && optcnt != 4)
         {
-            errorOTP.text = "Fields Should Not Empty"
+            errorOTP.text = "Please enter valid data"
         }
         else
         {
@@ -150,7 +180,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                     else
                     {
                         print("log verify OTP\(result)")
-                        errorOTP.text = "Something Went Wrong.."
+                        errorOTP.text = "User Is Not Registered.."
                     }
                 }
                 // Load the data
@@ -255,9 +285,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                         }
                         else
                         {
-                            self.ExistingUsersTable.isHidden = false
-                            self.ExistingUserLabel.isHidden = false
-                            self.ExistingUserLabel.text = "User already Exits.."
+                            self.errorOTP.isHidden = false
+                            self.errorOTP.text = "User already Exits.."
                         }
                     }
                 }
@@ -355,22 +384,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.ExitsingUserList.count
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected...")
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell = self.ExistingUsersTable.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
-        cell.textLabel?.text = ExitsingUserList[indexPath.row]
-        
-        return cell
-    }
+
 }
 

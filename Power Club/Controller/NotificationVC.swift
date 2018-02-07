@@ -9,28 +9,41 @@
 import UIKit
 import WebKit
 
-class NotificationVC: UIViewController {
+class NotificationVC: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var notificationWebview: WKWebView!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
+    var User:[UserDetails]? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let url =  URL(string: "http://clubhybridmodules.prisms.in/notifications/200/492")
-        let request = URLRequest(url: url!)
         
-        notificationWebview.load(request)
+        var userId: Int? = nil
+        User = UserDetailsDBHandler.fetchObject()
+        for i in User!
+        {
+            userId = Int(i.userId!)!
+        }
+        
+        if  let id = userId {
+            print(id)
+            let url =  NSURL(string: "http://clubhybridmodules.prisms.in/notifications/\(id)/492")
+            let request = NSURLRequest(url: url! as URL)
+            notificationWebview.load(request as URLRequest)
+        }
     }
     
-    @objc func back(sender: UIBarButtonItem) {
-        _ = navigationController?.popViewController(animated: true)
+    func webViewDidStartLoad(_ webView: UIWebView) {
+        self.loading.startAnimating()
     }
     
-
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        self.loading.stopAnimating()
+        self.loading.isHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
