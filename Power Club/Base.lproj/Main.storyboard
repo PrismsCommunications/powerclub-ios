@@ -100,22 +100,34 @@
             </objects>
             <point key="canvasLocation" x="-452" y="108.39580209895054"/>
         </scene>
-        <!--Dashboard-->
+        <!--Data Source-->
         <scene sceneID="5mA-zc-NP2">
             <objects>
-                <viewController storyboardIdentifier="Dashboard" title="Dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y7p-Ww-9qd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Dashboard" title="Dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y7p-Ww-9qd" customClass="DashBoardViewController" customModule="Power_Club" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S6K-dX-QTV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slider1" translatesAutoresizingMaskIntoConstraints="NO" id="M6I-mW-s8B">
-                                <rect key="frame" x="0.0" y="60" width="375" height="200"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6Y-wc-aPU" customClass="FSPagerView" customModule="Power_Club" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="224"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Ybw-5l-wNS"/>
+                                    <constraint firstAttribute="height" constant="224" id="34e-Vy-Pia"/>
                                 </constraints>
-                            </imageView>
+                                <connections>
+                                    <outlet property="dataSource" destination="y7p-Ww-9qd" id="2En-na-Huz"/>
+                                    <outlet property="delegate" destination="y7p-Ww-9qd" id="Gsj-9i-XFF"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQH-HH-4D4" customClass="FSPageControl" customModule="Power_Club" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="260" width="375" height="28"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="aB9-eq-N13"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Tf2-GO-bgR">
-                                <rect key="frame" x="0.0" y="284" width="375" height="322"/>
+                                <rect key="frame" x="0.0" y="288" width="375" height="322"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd6-BA-ZpO">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -182,16 +194,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="8iu-DQ-w0u" firstAttribute="trailing" secondItem="Tf2-GO-bgR" secondAttribute="trailing" id="BKG-06-Yoa"/>
-                            <constraint firstItem="Tf2-GO-bgR" firstAttribute="top" secondItem="8iu-DQ-w0u" secondAttribute="top" constant="220" id="YqO-fC-sJK"/>
-                            <constraint firstItem="Tf2-GO-bgR" firstAttribute="leading" secondItem="8iu-DQ-w0u" secondAttribute="leading" id="Yve-GT-Obw"/>
-                            <constraint firstItem="M6I-mW-s8B" firstAttribute="top" secondItem="S6K-dX-QTV" secondAttribute="top" constant="60" id="bGy-BZ-fK4"/>
-                            <constraint firstItem="M6I-mW-s8B" firstAttribute="leading" secondItem="8iu-DQ-w0u" secondAttribute="leading" id="ttd-rC-hRo"/>
-                            <constraint firstItem="M6I-mW-s8B" firstAttribute="trailing" secondItem="8iu-DQ-w0u" secondAttribute="trailing" id="xQU-QS-K1D"/>
+                            <constraint firstItem="cQH-HH-4D4" firstAttribute="top" secondItem="8iu-DQ-w0u" secondAttribute="top" constant="196" id="L0g-7x-Vko"/>
+                            <constraint firstItem="cQH-HH-4D4" firstAttribute="leading" secondItem="8iu-DQ-w0u" secondAttribute="leading" id="LRk-E1-ILB"/>
+                            <constraint firstItem="a6Y-wc-aPU" firstAttribute="trailing" secondItem="8iu-DQ-w0u" secondAttribute="trailing" id="XR3-sP-Mi1"/>
+                            <constraint firstItem="Tf2-GO-bgR" firstAttribute="top" secondItem="a6Y-wc-aPU" secondAttribute="bottom" id="eCm-hY-3h0"/>
+                            <constraint firstItem="cQH-HH-4D4" firstAttribute="trailing" secondItem="8iu-DQ-w0u" secondAttribute="trailing" id="fhv-vd-EDT"/>
+                            <constraint firstItem="a6Y-wc-aPU" firstAttribute="leading" secondItem="8iu-DQ-w0u" secondAttribute="leading" id="g54-7G-WFD"/>
+                            <constraint firstItem="Tf2-GO-bgR" firstAttribute="leading" secondItem="8iu-DQ-w0u" secondAttribute="leading" id="hkD-lL-67Y"/>
+                            <constraint firstItem="8iu-DQ-w0u" firstAttribute="trailing" secondItem="Tf2-GO-bgR" secondAttribute="trailing" id="qCj-HH-dfR"/>
+                            <constraint firstItem="a6Y-wc-aPU" firstAttribute="top" secondItem="8iu-DQ-w0u" secondAttribute="top" id="ul0-o6-wgB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8iu-DQ-w0u"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="WZd-Ub-cS5"/>
+                    <connections>
+                        <outlet property="pageControl" destination="cQH-HH-4D4" id="8Uq-6L-g7p"/>
+                        <outlet property="pagerView" destination="a6Y-wc-aPU" id="fcG-pl-uaZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HE4-iD-8JQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -432,7 +451,6 @@
         <image name="gallery" width="93" height="50"/>
         <image name="man" width="93" height="50"/>
         <image name="notification" width="93" height="50"/>
-        <image name="slider1" width="950" height="400"/>
         <image name="transperent" width="256" height="256"/>
     </resources>
 </document>

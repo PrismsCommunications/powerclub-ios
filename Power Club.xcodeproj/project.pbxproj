@@ -12,6 +12,17 @@
 		1C506A6C2019EDE400865BD7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1C506A6B2019EDE400865BD7 /* GoogleService-Info.plist */; };
 		1C55746B20172DBB006FF89D /* blackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C55746A20172DBB006FF89D /* blackButton.swift */; };
 		1CA1D2A920282B590016EA8A /* UserDetailsDBHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA1D2A820282B590016EA8A /* UserDetailsDBHandler.swift */; };
+		1CBDB9EA207216FD00BED96E /* FSPagerViewLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBDB9E3207216FA00BED96E /* FSPagerViewLayoutAttributes.swift */; };
+		1CBDB9EB207216FD00BED96E /* FSPageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBDB9E4207216FA00BED96E /* FSPageControl.swift */; };
+		1CBDB9EC207216FD00BED96E /* FSPagerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBDB9E5207216FA00BED96E /* FSPagerCollectionView.swift */; };
+		1CBDB9ED207216FD00BED96E /* FSPagerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBDB9E6207216FA00BED96E /* FSPagerViewCell.swift */; };
+		1CBDB9EE207216FD00BED96E /* FSPageViewTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBDB9E7207216FB00BED96E /* FSPageViewTransformer.swift */; };
+		1CBDB9EF207216FD00BED96E /* FSPageViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBDB9E8207216FB00BED96E /* FSPageViewLayout.swift */; };
+		1CBDB9F0207216FD00BED96E /* FSPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBDB9E9207216FB00BED96E /* FSPagerView.swift */; };
+		1CBDB9F620721B3400BED96E /* slider3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CBDB9F220721B2C00BED96E /* slider3.jpg */; };
+		1CBDB9F720721B3400BED96E /* slider4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CBDB9F320721B2E00BED96E /* slider4.jpg */; };
+		1CBDB9F820721B3400BED96E /* slider1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CBDB9F420721B3400BED96E /* slider1.jpg */; };
+		1CBDB9F920721B3400BED96E /* slider2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1CBDB9F520721B3400BED96E /* slider2.jpg */; };
 		1CE14C4A201629060094C802 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE14C49201629060094C802 /* AppDelegate.swift */; };
 		1CE14C4C201629060094C802 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE14C4B201629060094C802 /* ViewController.swift */; };
 		1CE14C4F201629060094C802 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CE14C4D201629060094C802 /* Main.storyboard */; };
@@ -34,6 +45,17 @@
 		1C506A6D2019EE1000865BD7 /* Power Club.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Power Club.entitlements"; sourceTree = "<group>"; };
 		1C55746A20172DBB006FF89D /* blackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blackButton.swift; sourceTree = "<group>"; };
 		1CA1D2A820282B590016EA8A /* UserDetailsDBHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsDBHandler.swift; sourceTree = "<group>"; };
+		1CBDB9E3207216FA00BED96E /* FSPagerViewLayoutAttributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPagerViewLayoutAttributes.swift; sourceTree = "<group>"; };
+		1CBDB9E4207216FA00BED96E /* FSPageControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPageControl.swift; sourceTree = "<group>"; };
+		1CBDB9E5207216FA00BED96E /* FSPagerCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPagerCollectionView.swift; sourceTree = "<group>"; };
+		1CBDB9E6207216FA00BED96E /* FSPagerViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPagerViewCell.swift; sourceTree = "<group>"; };
+		1CBDB9E7207216FB00BED96E /* FSPageViewTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPageViewTransformer.swift; sourceTree = "<group>"; };
+		1CBDB9E8207216FB00BED96E /* FSPageViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPageViewLayout.swift; sourceTree = "<group>"; };
+		1CBDB9E9207216FB00BED96E /* FSPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPagerView.swift; sourceTree = "<group>"; };
+		1CBDB9F220721B2C00BED96E /* slider3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = slider3.jpg; sourceTree = "<group>"; };
+		1CBDB9F320721B2E00BED96E /* slider4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = slider4.jpg; sourceTree = "<group>"; };
+		1CBDB9F420721B3400BED96E /* slider1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = slider1.jpg; sourceTree = "<group>"; };
+		1CBDB9F520721B3400BED96E /* slider2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = slider2.jpg; sourceTree = "<group>"; };
 		1CE14C46201629060094C802 /* Power Club.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Power Club.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE14C49201629060094C802 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CE14C4B201629060094C802 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +130,31 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		1CBDB9E22072167200BED96E /* FSslider */ = {
+			isa = PBXGroup;
+			children = (
+				1CBDB9E4207216FA00BED96E /* FSPageControl.swift */,
+				1CBDB9E5207216FA00BED96E /* FSPagerCollectionView.swift */,
+				1CBDB9E9207216FB00BED96E /* FSPagerView.swift */,
+				1CBDB9E6207216FA00BED96E /* FSPagerViewCell.swift */,
+				1CBDB9E8207216FB00BED96E /* FSPageViewLayout.swift */,
+				1CBDB9E7207216FB00BED96E /* FSPageViewTransformer.swift */,
+				1CBDB9E3207216FA00BED96E /* FSPagerViewLayoutAttributes.swift */,
+			);
+			path = FSslider;
+			sourceTree = "<group>";
+		};
+		1CBDB9F1207217EA00BED96E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1CBDB9F420721B3400BED96E /* slider1.jpg */,
+				1CBDB9F520721B3400BED96E /* slider2.jpg */,
+				1CBDB9F220721B2C00BED96E /* slider3.jpg */,
+				1CBDB9F320721B2E00BED96E /* slider4.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1CE14C3D201629060094C802 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +183,8 @@
 				1C55746920172D8C006FF89D /* Controller */,
 				1C55746820172D86006FF89D /* View */,
 				1C55746720172D7D006FF89D /* Model */,
+				1CBDB9F1207217EA00BED96E /* Resources */,
+				1CBDB9E22072167200BED96E /* FSslider */,
 				1CE14C49201629060094C802 /* AppDelegate.swift */,
 				1CE14C4D201629060094C802 /* Main.storyboard */,
 				1CE14C50201629060094C802 /* Assets.xcassets */,
@@ -230,10 +279,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBDB9F620721B3400BED96E /* slider3.jpg in Resources */,
+				1CBDB9F820721B3400BED96E /* slider1.jpg in Resources */,
+				1CBDB9F720721B3400BED96E /* slider4.jpg in Resources */,
 				1CE14C54201629060094C802 /* LaunchScreen.storyboard in Resources */,
 				1C506A6C2019EDE400865BD7 /* GoogleService-Info.plist in Resources */,
 				1CE14C51201629060094C802 /* Assets.xcassets in Resources */,
 				1CE14C4F201629060094C802 /* Main.storyboard in Resources */,
+				1CBDB9F920721B3400BED96E /* slider2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,18 +355,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CBDB9EA207216FD00BED96E /* FSPagerViewLayoutAttributes.swift in Sources */,
 				1CEB6A99201896BB0052AA56 /* MenuItemsVC.swift in Sources */,
+				1CBDB9EF207216FD00BED96E /* FSPageViewLayout.swift in Sources */,
+				1CBDB9ED207216FD00BED96E /* FSPagerViewCell.swift in Sources */,
 				1CEB6A97201896A10052AA56 /* DashBoardViewController.swift in Sources */,
 				1C55746B20172DBB006FF89D /* blackButton.swift in Sources */,
 				1CE14C4C201629060094C802 /* ViewController.swift in Sources */,
+				1CBDB9EE207216FD00BED96E /* FSPageViewTransformer.swift in Sources */,
+				1CBDB9EC207216FD00BED96E /* FSPagerCollectionView.swift in Sources */,
 				1CE14C4A201629060094C802 /* AppDelegate.swift in Sources */,
 				1CEB6A9F2018CB700052AA56 /* FeedbackVC.swift in Sources */,
+				1CBDB9F0207216FD00BED96E /* FSPagerView.swift in Sources */,
 				1CEB6AA32018CC4C0052AA56 /* HolidaysVC.swift in Sources */,
 				1C506A6A2019ED4C00865BD7 /* YourProfileVC.swift in Sources */,
 				1CA1D2A920282B590016EA8A /* UserDetailsDBHandler.swift in Sources */,
 				1CEB6AA12018CB870052AA56 /* GalleryVC.swift in Sources */,
 				1CEB6A95201895870052AA56 /* SWRevealViewController.m in Sources */,
 				1CEB6A9B2018CAC30052AA56 /* NotificationVC.swift in Sources */,
+				1CBDB9EB207216FD00BED96E /* FSPageControl.swift in Sources */,
 				1C2720682026FC5200976DE9 /* PowerclubModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
