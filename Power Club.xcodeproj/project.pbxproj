@@ -223,7 +223,6 @@
 				1CE14C43201629060094C802 /* Frameworks */,
 				1CE14C44201629060094C802 /* Resources */,
 				412F054291E9A76307F2865C /* [CP] Embed Pods Frameworks */,
-				9A32B69D246A792442090EF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,32 +301,19 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Power Club/Pods-Power Club-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SKActivityIndicatorView/SKActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SKActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Power Club/Pods-Power Club-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A32B69D246A792442090EF3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Power Club/Pods-Power Club-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E0912CEA5376AA934D04DCFC /* [CP] Check Pods Manifest.lock */ = {

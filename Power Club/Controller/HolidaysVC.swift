@@ -8,6 +8,8 @@
 
 import UIKit
 import WebKit
+import SKActivityIndicatorView
+
 
 class HolidaysVC: UIViewController {
 
@@ -18,6 +20,9 @@ class HolidaysVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SKActivityIndicator.show("Loading...")
+        SKActivityIndicator.spinnerStyle(.spinningCircle)
         
         var userId: Int? = nil
         User = UserDetailsDBHandler.fetchObject()
@@ -31,15 +36,16 @@ class HolidaysVC: UIViewController {
             let url =  NSURL(string: "http://clubhybridmodules.prisms.in/holidays/\(id)/492")
             let request = NSURLRequest(url: url! as URL)
             HolidaysWebview.load(request as URLRequest)
+            SKActivityIndicator.dismiss()
         }
     }
 
     func webViewDidStartLoad(_ webView: UIWebView) {
-        self.loading.startAnimating()
+        
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        self.loading.stopAnimating()
+        SKActivityIndicator.dismiss()
     }
     
     override func didReceiveMemoryWarning() {

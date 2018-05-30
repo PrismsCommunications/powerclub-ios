@@ -232,24 +232,17 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1f5-WE-Cmo">
-                                <rect key="frame" x="177" y="354" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ZXP-CC-vnI" firstAttribute="top" secondItem="4zu-44-gV7" secondAttribute="top" id="20l-ed-AMD"/>
-                            <constraint firstItem="4zu-44-gV7" firstAttribute="trailing" secondItem="1f5-WE-Cmo" secondAttribute="trailing" constant="178" id="B1L-i1-KXe"/>
                             <constraint firstItem="4zu-44-gV7" firstAttribute="bottom" secondItem="ZXP-CC-vnI" secondAttribute="bottom" id="BBG-Hq-vDa"/>
                             <constraint firstItem="ZXP-CC-vnI" firstAttribute="leading" secondItem="4zu-44-gV7" secondAttribute="leading" id="FHN-k0-1iw"/>
                             <constraint firstItem="4zu-44-gV7" firstAttribute="trailing" secondItem="ZXP-CC-vnI" secondAttribute="trailing" id="Gf7-WI-bsT"/>
-                            <constraint firstItem="1f5-WE-Cmo" firstAttribute="leading" secondItem="4zu-44-gV7" secondAttribute="leading" constant="177" id="WTF-bR-ULR"/>
-                            <constraint firstItem="1f5-WE-Cmo" firstAttribute="top" secondItem="4zu-44-gV7" secondAttribute="top" constant="290" id="nMc-Uy-63u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4zu-44-gV7"/>
                     </view>
                     <connections>
-                        <outlet property="loading" destination="1f5-WE-Cmo" id="i8T-WN-KKo"/>
                         <outlet property="notificationWebview" destination="ZXP-CC-vnI" id="oUx-TY-it7"/>
                     </connections>
                 </viewController>
@@ -273,24 +266,17 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1oA-Dc-NSN">
-                                <rect key="frame" x="177" y="314" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1oA-Dc-NSN" firstAttribute="leading" secondItem="eXx-UM-I6k" secondAttribute="leading" constant="177" id="5L2-qG-Tns"/>
                             <constraint firstItem="Cmk-SW-kqe" firstAttribute="top" secondItem="YJ6-gr-Gny" secondAttribute="top" id="Q85-ni-QGL"/>
                             <constraint firstItem="Cmk-SW-kqe" firstAttribute="bottom" secondItem="eXx-UM-I6k" secondAttribute="bottom" id="Tme-60-aL4"/>
                             <constraint firstItem="Cmk-SW-kqe" firstAttribute="trailing" secondItem="eXx-UM-I6k" secondAttribute="trailing" id="b84-k4-pLA"/>
-                            <constraint firstItem="1oA-Dc-NSN" firstAttribute="top" secondItem="eXx-UM-I6k" secondAttribute="top" constant="250" id="off-Nz-5nl"/>
                             <constraint firstItem="Cmk-SW-kqe" firstAttribute="leading" secondItem="eXx-UM-I6k" secondAttribute="leading" id="x2t-zg-5YH"/>
-                            <constraint firstItem="eXx-UM-I6k" firstAttribute="trailing" secondItem="1oA-Dc-NSN" secondAttribute="trailing" constant="178" id="xgw-z4-9jI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eXx-UM-I6k"/>
                     </view>
                     <connections>
-                        <outlet property="loading" destination="1oA-Dc-NSN" id="6AU-JP-05l"/>
                         <outlet property="profileWebview" destination="Cmk-SW-kqe" id="iwN-Va-VN3"/>
                     </connections>
                 </viewController>
@@ -314,25 +300,18 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="EHS-sL-kmO">
-                                <rect key="frame" x="177" y="314" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cxr-lK-o1s" firstAttribute="leading" secondItem="MoG-ht-sHg" secondAttribute="leading" id="0QO-Lf-6cW"/>
                             <constraint firstItem="cxr-lK-o1s" firstAttribute="trailing" secondItem="MoG-ht-sHg" secondAttribute="trailing" id="6tg-ss-T7R"/>
                             <constraint firstItem="cxr-lK-o1s" firstAttribute="bottom" secondItem="MoG-ht-sHg" secondAttribute="bottom" id="LTp-ZZ-RON"/>
-                            <constraint firstItem="EHS-sL-kmO" firstAttribute="leading" secondItem="MoG-ht-sHg" secondAttribute="leading" constant="177" id="X3b-Ir-zpq"/>
-                            <constraint firstItem="MoG-ht-sHg" firstAttribute="trailing" secondItem="EHS-sL-kmO" secondAttribute="trailing" constant="178" id="fJX-px-KcW"/>
-                            <constraint firstItem="EHS-sL-kmO" firstAttribute="top" secondItem="MoG-ht-sHg" secondAttribute="top" constant="250" id="lb1-Uz-EdZ"/>
                             <constraint firstItem="cxr-lK-o1s" firstAttribute="top" secondItem="jT4-1S-rUj" secondAttribute="top" id="txf-30-LHD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MoG-ht-sHg"/>
                     </view>
                     <connections>
                         <outlet property="GalleryWebview" destination="cxr-lK-o1s" id="CUb-ec-KL0"/>
-                        <outlet property="loading" destination="EHS-sL-kmO" id="V3I-lw-Ju5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Myh-rC-60y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -355,17 +334,11 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="OSB-gV-GO3">
-                                <rect key="frame" x="177" y="314" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iav-eB-Oug" firstAttribute="bottom" secondItem="jQd-JS-KSl" secondAttribute="bottom" id="a1u-jV-Aof"/>
-                            <constraint firstItem="iav-eB-Oug" firstAttribute="trailing" secondItem="OSB-gV-GO3" secondAttribute="trailing" constant="178" id="aIT-ZD-2BC"/>
-                            <constraint firstItem="OSB-gV-GO3" firstAttribute="leading" secondItem="iav-eB-Oug" secondAttribute="leading" constant="177" id="d2t-Xy-3Kr"/>
                             <constraint firstItem="jQd-JS-KSl" firstAttribute="leading" secondItem="iav-eB-Oug" secondAttribute="leading" id="fQQ-QE-Mje"/>
-                            <constraint firstItem="OSB-gV-GO3" firstAttribute="top" secondItem="iav-eB-Oug" secondAttribute="top" constant="250" id="jZe-Ua-K1s"/>
                             <constraint firstItem="jQd-JS-KSl" firstAttribute="top" secondItem="aUw-dF-gyN" secondAttribute="top" id="nua-iE-a4Q"/>
                             <constraint firstItem="iav-eB-Oug" firstAttribute="trailing" secondItem="jQd-JS-KSl" secondAttribute="trailing" id="yzF-7a-tMp"/>
                         </constraints>
@@ -373,7 +346,6 @@
                     </view>
                     <connections>
                         <outlet property="HolidaysWebview" destination="jQd-JS-KSl" id="fkT-N7-nEq"/>
-                        <outlet property="loading" destination="OSB-gV-GO3" id="mRx-mf-kIt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L40-ny-26O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -396,25 +368,18 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jNJ-8K-7GM">
-                                <rect key="frame" x="177" y="314" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ewa-81-Oge" firstAttribute="trailing" secondItem="5C2-rc-Dfo" secondAttribute="trailing" id="45H-M6-PSM"/>
-                            <constraint firstItem="jNJ-8K-7GM" firstAttribute="leading" secondItem="5C2-rc-Dfo" secondAttribute="leading" constant="177" id="7ch-Yn-jNp"/>
                             <constraint firstItem="ewa-81-Oge" firstAttribute="bottom" secondItem="5C2-rc-Dfo" secondAttribute="bottom" id="84d-jM-teH"/>
-                            <constraint firstItem="5C2-rc-Dfo" firstAttribute="trailing" secondItem="jNJ-8K-7GM" secondAttribute="trailing" constant="178" id="HUD-fv-Fod"/>
                             <constraint firstItem="ewa-81-Oge" firstAttribute="leading" secondItem="5C2-rc-Dfo" secondAttribute="leading" id="SwL-XG-Eze"/>
                             <constraint firstItem="ewa-81-Oge" firstAttribute="top" secondItem="i7K-5o-9VO" secondAttribute="top" id="U94-X6-6YC"/>
-                            <constraint firstItem="jNJ-8K-7GM" firstAttribute="top" secondItem="5C2-rc-Dfo" secondAttribute="top" constant="250" id="UfA-84-j5t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5C2-rc-Dfo"/>
                     </view>
                     <connections>
                         <outlet property="FeedbackWebView" destination="ewa-81-Oge" id="2eR-BF-kti"/>
-                        <outlet property="loading" destination="jNJ-8K-7GM" id="RvC-xS-Bg6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="isx-6h-Ob3" userLabel="First Responder" sceneMemberID="firstResponder"/>

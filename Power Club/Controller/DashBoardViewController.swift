@@ -35,9 +35,7 @@ class DashBoardViewController: UIViewController ,FSPagerViewDataSource,FSPagerVi
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        btmMenu.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
+
         
     }
 

@@ -8,6 +8,8 @@
 
 import UIKit
 import WebKit
+import SKActivityIndicatorView
+
 
 class NotificationVC: UIViewController, UIWebViewDelegate {
 
@@ -17,6 +19,9 @@ class NotificationVC: UIViewController, UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SKActivityIndicator.show("Loading...")
+        SKActivityIndicator.spinnerStyle(.spinningCircle)
         
         var userId: Int? = nil
         User = UserDetailsDBHandler.fetchObject()
@@ -30,16 +35,17 @@ class NotificationVC: UIViewController, UIWebViewDelegate {
             let url =  NSURL(string: "http://clubhybridmodules.prisms.in/notifications/\(id)/492")
             let request = NSURLRequest(url: url! as URL)
             notificationWebview.load(request as URLRequest)
+            sleep(5)
+            SKActivityIndicator.dismiss()
         }
     }
     
     func webViewDidStartLoad(_ webView: UIWebView) {
-        self.loading.startAnimating()
+
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        self.loading.stopAnimating()
-        self.loading.isHidden = false
+        SKActivityIndicator.dismiss()
     }
     
     override func didReceiveMemoryWarning() {

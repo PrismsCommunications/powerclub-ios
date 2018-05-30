@@ -8,6 +8,8 @@
 
 import UIKit
 import WebKit
+import SKActivityIndicatorView
+
 
 class FeedbackVC: UIViewController {
 
@@ -16,18 +18,23 @@ class FeedbackVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SKActivityIndicator.show("Loading...")
+        SKActivityIndicator.spinnerStyle(.spinningCircle)
 
         let url =  NSURL(string: "https://docs.google.com/forms/d/e/1FAIpQLSc4WYUzqAN260a-PauG6WQfhFSJ8wG62o4Ki2Iwb9OOaDbbFQ/viewform?entry.325730274=test&entry.821088630=9930055390")
         let request = NSURLRequest(url: url! as URL)
         FeedbackWebView.load(request as URLRequest)
+        sleep(5)
+        SKActivityIndicator.dismiss()
     }
     
     func webViewDidStartLoad(_ webView: UIWebView) {
-        self.loading.startAnimating()
+
     }
 
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        self.loading.stopAnimating()
+        SKActivityIndicator.dismiss()
     }
 
     override func didReceiveMemoryWarning() {

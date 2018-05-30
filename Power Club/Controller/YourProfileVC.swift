@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import SKActivityIndicatorView
 
 class YourProfileVC: UIViewController {
 
@@ -17,6 +18,9 @@ class YourProfileVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        SKActivityIndicator.show("Loading...")
+        SKActivityIndicator.spinnerStyle(.spinningCircle)
 
         var userId: Int? = nil
         User = UserDetailsDBHandler.fetchObject()
@@ -30,15 +34,17 @@ class YourProfileVC: UIViewController {
             let url =  NSURL(string: "http://clubhybridmodules.prisms.in/memberdetails/\(id)/492")
             let request = NSURLRequest(url: url! as URL)
             profileWebview.load(request as URLRequest)
+            sleep(5)
+            SKActivityIndicator.dismiss()
         }
     }
 
     func webViewDidStartLoad(_ webView: UIWebView) {
-        self.loading.startAnimating()
+        
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
-        self.loading.stopAnimating()
+        SKActivityIndicator.dismiss()
     }
 
     override func didReceiveMemoryWarning() {

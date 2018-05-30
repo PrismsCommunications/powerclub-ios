@@ -8,5 +8,6 @@ target 'Power Club' do
   pod 'Alamofire’
   pod ‘Firebase/Core’
   pod ‘Firebase/Messaging’
+  pod 'SKActivityIndicatorView', '~> 0.1.0'
 
 end
